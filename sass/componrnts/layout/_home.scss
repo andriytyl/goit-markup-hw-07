@@ -14,6 +14,13 @@
     background-repeat: no-repeat;
 
     background-size: cover;
+    &:hover {
+            background-color: #188ce8;
+        }
+    
+       &:focus {
+            background-color: #188ce8;
+        }
 }
 
 .section-home-button-logo {
@@ -31,11 +38,3 @@
     margin-bottom: 30px;
 }
 
-
-.sec-home-button:hover {
-    background-color: #188ce8;
-}
-
-.sec-home-button:focus {
-    background-color: #188ce8;
-}

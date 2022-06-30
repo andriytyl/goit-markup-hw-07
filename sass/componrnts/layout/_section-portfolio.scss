@@ -7,28 +7,16 @@
   margin-bottom: 50px;
   display: flex;
   justify-content: center;
+  .section-li &:hover {
+      color: #ffff;
+    }
 }
 .section-li:not(:last-child) {
   margin-right: 30px;
 }
-.section-li .section-ul :hover {
-  color: #ffff;
-}
 
-.section-butn:hover {
-  color: #ffffff;
-  background-color: #2196f3;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.section-butn:focus {
-  color: #ffffff;
-  background-color: #2196f3;
- transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+
+
 
 .section-butn {
   border: none;
@@ -47,6 +35,21 @@
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover {
+        color: #ffffff;
+        background-color: #2196f3;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+          background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+          box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
+    
+      &:focus {
+        color: #ffffff;
+        background-color: #2196f3;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+          background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+          box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
 }
 .active-button {
   color: #ffffff;

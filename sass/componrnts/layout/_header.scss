@@ -2,12 +2,12 @@
     padding-top: 24px;
     padding-bottom: 25px;
     border: 1px solid #ececec;
+    .container {
+            display: flex;
+            align-items: center;
+        }
 }
 
-.header-home .container {
-    display: flex;
-    align-items: center;
-}
 
 
 
@@ -43,13 +43,7 @@
     display: flex;
 }
 
-.header-home-a:hover {
-    color: #2196f3;
-}
 
-.header-home-a:focus {
-    color: #2196f3;
-}
 
 .active {
     position: relative;
@@ -86,6 +80,13 @@
 .header-home-a {
     text-decoration: none;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   &:hover {
+            color: #2196f3;
+        }
+    
+        &:focus {
+            color: #2196f3;
+        }
 }
 
 .header-home-contact {
@@ -96,19 +97,13 @@
 .header-home-contacnlink {
     list-style: none;
     margin-right: 50px;
+    &:last-child {
+            margin-right: 0;
+        }
 }
 
-.header-home-contacnlink:last-child {
-    margin-right: 0;
-}
 
-.header-home-tel:hover {
-    color: #2196f3;
-}
 
-.header-home-tel:focus {
-    color: #2196f3;
-}
 
 .header-home-tel {
     display: flex;
@@ -122,30 +117,39 @@
     color: #757575;
     align-items: center;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover {
+            color: #2196f3;
+        }
+    
+        &:focus {
+            color: #2196f3;
+        }
 }
 
 .mail-iconssvg {
     fill: #757575;
     margin-right: 10px;
+    .header-home-tel:hover & {
+            fill: #2196f3;
+        }
+                .header-home-tel:focus & {
+                    fill: #2196f3;
+                }
 }
 
 .tel-iconssvg {
     fill: #757575;
     margin-right: 10px;
+    .header-home-tel:hover & {
+            fill: #2196f3;
+        }
+                .header-home-tel:focus & {
+                    fill: #2196f3;
+                }
 }
 
-.header-home-tel:hover .tel-iconssvg {
-    fill: #2196f3;
-}
 
-.header-home-tel:hover .mail-iconssvg {
-    fill: #2196f3;
-}
 
-.header-home-tel:focus .tel-iconssvg {
-    fill: #2196f3;
-}
 
-.header-home-tel:focus .mail-iconssvg {
-    fill: #2196f3;
-}
+
+
