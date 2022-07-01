@@ -1,8 +1,3 @@
-body {
-  font-family: "Roboto", sans-serif;
-  color: #e5e5e5;
-}
-
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 /*
 Document
@@ -271,6 +266,11 @@ summary {
   display: list-item;
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+  color: #e5e5e5;
+}
+
 p,
 h1,
 h2,
@@ -337,7 +337,7 @@ img {
   color: #000000;
 }
 
-.header-home-link {
+.menu {
   list-style: none;
   text-decoration: none;
   font-weight: 500;
@@ -374,35 +374,35 @@ img {
   border-radius: 2px;
 }
 
-.header-home-link-links:not(:last-child) {
+.menu__links:not(:last-child) {
   margin-right: 50px;
 }
 
-.header-home-a {
+.menu__a {
   text-decoration: none;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.header-home-a:hover {
+.menu__a:hover {
   color: #2196f3;
 }
-.header-home-a:focus {
+.menu__a:focus {
   color: #2196f3;
 }
 
-.header-home-contact {
+.contact {
   display: flex;
   margin-left: auto;
 }
 
-.header-home-contacnlink {
+.contact__contacnlink {
   list-style: none;
   margin-right: 50px;
 }
-.header-home-contacnlink:last-child {
+.contact__contacnlink:last-child {
   margin-right: 0;
 }
 
-.header-home-tel {
+.contact__tel {
   display: flex;
   list-style: none;
   text-decoration: none;
@@ -414,10 +414,10 @@ img {
   align-items: center;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.header-home-tel:hover {
+.contact__tel:hover {
   color: #2196f3;
 }
-.header-home-tel:focus {
+.contact__tel:focus {
   color: #2196f3;
 }
 
@@ -436,10 +436,10 @@ img {
   fill: #757575;
   margin-right: 10px;
 }
-.header-home-tel:hover .tel-iconssvg {
+.contact__tel:hover .tel-iconssvg {
   fill: #2196f3;
 }
-.header-home-tel:focus .tel-iconssvg {
+.contact__tel:focus .tel-iconssvg {
   fill: #2196f3;
 }
 
@@ -735,18 +735,6 @@ img {
   color: white;
 }
 
-.section-butn:hover {
-  color: #ffffff;
-  background-color: #2196f3;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.section-butn:focus {
-  color: #ffffff;
-  background-color: #2196f3;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .section-butn {
   border: none;
   background-color: #f5f4fa;
@@ -758,6 +746,16 @@ img {
   letter-spacing: 0.03em;
   color: #212121;
   padding: 6px 22px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.section-butn:hover {
+  color: #ffffff;
+  background-color: #2196f3;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.section-butn:focus {
+  color: #ffffff;
+  background-color: #2196f3;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -791,9 +789,7 @@ img {
   margin: 15px;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.section-galeri-list:hover,
-.section-galeri-list:focus {
+.section-galeri-list:hover, .section-galeri-list:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
@@ -1051,7 +1047,6 @@ img {
   align-items: center;
   padding: 0;
 }
-
 .modal-close:hover {
   fill: #2196f3;
 }
@@ -1082,21 +1077,12 @@ img {
   background-color: transparent;
   outline: transparent;
 }
-
 .modal-input::placeholder {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: #757575;
-}
-
-.input-wrap :focus {
-  border-color: #2196F3;
-}
-
-.input-wrap :focus + .imput-svg {
-  fill: #2196f3;
 }
 
 .modal-in {
@@ -1122,6 +1108,9 @@ img {
   position: relative;
   margin-bottom: 10px;
 }
+.input-wrap:focus {
+  border-color: #2196F3;
+}
 
 .imput-svg {
   position: absolute;
@@ -1129,6 +1118,9 @@ img {
   bottom: 11px;
   width: 18px;
   height: 18px;
+}
+.input-wrap:focus + .imput-svg {
+  fill: #2196f3;
 }
 
 .user-tex {
@@ -1139,7 +1131,6 @@ img {
   resize: none;
   padding: 12px 16px;
 }
-
 .user-tex::placeholder {
   font-weight: 400;
   font-size: 12px;
@@ -1178,11 +1169,9 @@ img {
   display: flex;
   align-items: center;
 }
-
 .checkbox-tex a {
   color: #2196f3;
 }
-
 .checkbox-tex::before {
   content: "";
   width: 16px;

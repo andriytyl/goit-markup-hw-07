@@ -29,7 +29,7 @@
     color: #000000;
 }
 
-.header-home-link {
+.menu {
     list-style: none;
     text-decoration: none;
 
@@ -73,11 +73,11 @@
     border-radius: 2px;
 }
 
-.header-home-link-links:not(:last-child) {
+.menu__links:not(:last-child) {
     margin-right: 50px;
 }
 
-.header-home-a {
+.menu__a {
     text-decoration: none;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
    &:hover {
@@ -89,12 +89,12 @@
         }
 }
 
-.header-home-contact {
+.contact {
     display: flex;
     margin-left: auto;
 }
 
-.header-home-contacnlink {
+.contact__contacnlink {
     list-style: none;
     margin-right: 50px;
     &:last-child {
@@ -105,7 +105,7 @@
 
 
 
-.header-home-tel {
+.contact__tel {
     display: flex;
     list-style: none;
     text-decoration: none;
@@ -140,10 +140,10 @@
 .tel-iconssvg {
     fill: #757575;
     margin-right: 10px;
-    .header-home-tel:hover & {
+    .contact__tel:hover & {
             fill: #2196f3;
         }
-                .header-home-tel:focus & {
+                .contact__tel:focus & {
                     fill: #2196f3;
                 }
 }
