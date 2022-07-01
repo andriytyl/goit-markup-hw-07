@@ -8,7 +8,9 @@
     transition: opacity 250ms linear, visibility 250ms linear;
 }
 
-
+.backdrop .is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0);
+}
 
 .modal {
     position: absolute;
@@ -21,9 +23,6 @@
     transition: transform 250ms;
     padding: 40px;
     border-radius: 4px;
-    .backdrop .is-hidden & {
-            transform: translate(-50%, -50%) scale(0);
-        }
 }
 
 .modal-close {
@@ -40,12 +39,11 @@
     justify-content: center;
     align-items: center;
     padding: 0;
-    &:hover {
-            fill: #2196f3;
-        }
 }
 
-
+.modal-close:hover {
+    fill: #2196f3;
+}
 
 .is-hidden {
     opacity: 0;
@@ -65,6 +63,8 @@
     margin-bottom: 12px;
 }
 
+.modal-form {}
+
 .modal-input {
     width: 100%;
 
@@ -77,22 +77,26 @@
     background-color: transparent;
 
     outline: transparent;
-    &::placeholder {
-            font-weight: 400;
-            font-size: 12px;
-            line-height: 1.17;
-    
-            letter-spacing: 0.01em;
-    
-            color: #757575;
-    
-        }
 }
 
+.modal-input::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
 
+    letter-spacing: 0.01em;
 
+    color: #757575;
 
+}
 
+.input-wrap :focus {
+    border-color: #2196F3;
+}
+
+.input-wrap :focus+.imput-svg {
+    fill: #2196f3;
+}
 
 .modal-in {
     margin-bottom: 10px;
@@ -118,9 +122,6 @@
 .input-wrap {
     position: relative;
     margin-bottom: 10px;
-    &:focus {
-            border-color: #2196F3;
-        }
 }
 
 .imput-svg {
@@ -129,9 +130,6 @@
     bottom: 11px;
     width: 18px;
     height: 18px;
-    .input-wrap:focus+& {
-            fill: #2196f3;
-        }
 
 }
 
@@ -142,15 +140,14 @@
     border-radius: 4px;
     resize: none;
     padding: 12px 16px;
-    &::placeholder {
-            font-weight: 400;
-            font-size: 12px;
-            line-height: 1.17;
-    
-        }
 }
 
+.user-tex::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
 
+}
 
 .model-cgecbox {
     display: flex;
@@ -160,8 +157,15 @@
     justify-content: center;
 }
 
+.checkbox {}
 
-
+.checkbox:checked+.checkbox-tex::before {
+    background-color: #2196f3;
+    background-image: url(../images/gala.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+}
 
 .checkbox-tex {
     font-weight: 400;
@@ -169,34 +173,33 @@
     line-height: 2;
     letter-spacing: 0.03em;
     color: #757575;
-    display: flex;
-        align-items: center;
-
-                a {
-                    color: #2196f3;
-        
-                }
-                                &::before {
-                                    content: '';
-                                    width: 16px;
-                                    height: 15px;
-                                    border: 2px solid #212121;
-                                    border-radius: 2px;
-                                    margin-right: 7px;
-                                }
 }
 
-        .checkbox:checked+.checkbox-tex::before {
-            background-color: #2196f3;
-            background-image: url(../images/gala.svg);
-            background-repeat: no-repeat;
-            background-position: center;
-            border: none;
-        }
+.checkbox-tex {
 
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 2;
+    letter-spacing: 0.03em;
 
+    display: flex;
+    align-items: center;
 
+}
 
+.checkbox-tex a {
+    color: #2196f3;
+
+}
+
+.checkbox-tex::before {
+    content: '';
+    width: 16px;
+    height: 15px;
+    border: 2px solid #212121;
+    border-radius: 2px;
+    margin-right: 7px;
+}
 
 .visually-hidden {
     position: absolute;
